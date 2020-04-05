@@ -14,7 +14,7 @@ let flights = require('../data');
 
 router
 	.get('/', function (req, res, next) {
-		//console.log(flights);
+		//console.log('they are '+flights);
 		res.render('index', { title: 'Flights', flights });
 	})
 	.post('/', function (req, res, next) {
@@ -34,7 +34,7 @@ router
 		};
 		//flights.push(item);
 		flights[number] = item;
-		console.log(flights);
+		//console.log('they are'+ flights);
 		//res.redirect("/");
 		res.format({
 			//HTML response will set the location and redirect back to the home page. You could also create a 'success' page if that's your thing

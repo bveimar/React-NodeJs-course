@@ -9,7 +9,7 @@ router.get('/', function (req, res, next) {
 router.post('/', function (req, res, next) {
   console.log(req.body);
   let data = { result: req.body.A + req.body.B };
-  res.render('sum', data);
+  res.render('sum', data); //esta enviando algo de regreso al cliente el servidor node
 });
 
 module.exports = router;

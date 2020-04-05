@@ -9,3 +9,4 @@ let rate = 5;
 let {monthlyPayment, monthlyRate, amortization} = 
     mortgage.calculateAmortization(principal, years, rate);
    
+    mortgage.amortization();

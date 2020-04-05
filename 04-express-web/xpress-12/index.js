@@ -29,7 +29,7 @@ app
     res.setHeader('Content-Type', 'text/plain');
     res.end('You’re in the wine cellar. Those bottles are mine!');
 })
-.get('/floor/:floornum/bedroom', function(req, res) {
+.get('/floor/:floornum/bedroom', function(req, res) {  //: pathdinamico  el (numero de cuarto) siginfica que ese sera un parametro parta luego utilizarlo
     res.setHeader('Content-Type', 'text/plain');
     res.end('You’re in the bedroom on floor No:' + req.params.floornum);
 })

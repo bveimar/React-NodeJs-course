@@ -23,7 +23,7 @@ app.get('/', function (req, res) {
     res.end();
 });
 
-app.get('/basement', function (req, res) {
+app.get('/basement', function (req, res) {           //when we navigate all the time send GET
     res.setHeader('Content-Type', 'text/plain');
     res.end('You\’re in the wine cellar. Those bottles are mine!');
 });

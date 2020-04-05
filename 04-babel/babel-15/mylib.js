@@ -1,1 +1,1 @@
-export let list = ['a','b'];
+export let list = ['a','b'];  

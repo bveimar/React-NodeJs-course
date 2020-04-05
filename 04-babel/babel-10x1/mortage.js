@@ -5,14 +5,14 @@ class Mortgage {
         this.years = years;
         this.rate = rate;
     }
-    
+    //convertir metodos independientes
     monthlyPayment() {
         let monthlyRate = this.rate / 100 / 12;
         return this.principal * monthlyRate / (1 - (Math.pow(1/(1 + monthlyRate),
                     this.years * 12)));
     }
     
-    amortization() {
+    calculateAmortization() {
         let monthlyPayment = this.monthlyPayment;
         let monthlyRate = this.rate / 100 / 12;
         let balance = this.principal;

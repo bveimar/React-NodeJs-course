@@ -34,16 +34,17 @@ function getContent(url) {
     return new Promise((resolve, reject) => {
         const xhr = new XMLHttpRequest();
         xhr.open("GET", url);
-        xhr.onload = () => resolve(xhr.responseText);
-        xhr.onerror = () => reject(xhr.statusText);
+        xhr.onload = () => resolve(xhr.responseText); //se ejecuta si funcuiona todo bien
+        xhr.onerror = () => reject(xhr.statusText);// se ejecuta si hay algun error
         xhr.send();
     });
 }
 
 getContent('https://github.com/tecnocrata/')
-.then(data=>{
+.then(data=>{  //espera los parametros de resolve de la promise
     console.log(data);
 })
 .catch(e=>{
+    console.log ("An error not expect....");
     console.log(e);
 });

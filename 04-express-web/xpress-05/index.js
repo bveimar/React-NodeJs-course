@@ -9,7 +9,7 @@ All return same page, but now with url module.....
 */
 let url = require("url");
 let server = http.createServer(function (req, res) {
-    let page = url.parse(req.url).pathname;
+    let page = url.parse(req.url).pathname; //estoy imprimeindo el pathname
     console.log(page);
     res.writeHead(200, {
         "Content-Type": "text/html"

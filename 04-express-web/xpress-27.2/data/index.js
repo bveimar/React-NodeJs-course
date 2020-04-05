@@ -1,4 +1,4 @@
-module.exports = {
+module.exports = [{
 	"13": {
 		"number": 13,
 		"origin": "MKE",
@@ -258,4 +258,4 @@ module.exports = {
 		"departs": "1:00 PM",
 		"arrives": "1:30 PM"
 	}
-};
+}];

@@ -25,11 +25,16 @@ let myFirstPromise = function() {
     });
 }
 
-myFirstPromise().then((successMessage) => {
+myFirstPromise()
+.then((successMessage) => {
     // successMessage is whatever we passed in the resolve(...) function above.
     // It doesn't have to be a string, but if it is only a succeed message, it probably will be.
     console.log("10 seconds again! " + successMessage);
-});
+})
+.catch(err =>{
+    console.log("set timeout failed");
+})
+;
 //The code doesn't stop the execution on previous lines
 //it continues until HERE even after call myFirstPromise
 console.log('FINISHED!!!');

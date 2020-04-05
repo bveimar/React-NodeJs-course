@@ -21,7 +21,9 @@ let favicon = require('serve-favicon'); // loads the piece of middleware for the
 let app = express();
 app.use(morgan('combined')) // loads the piece of middleware for logging
     .use(express.static(__dirname + '/public')) // Specifies that the /public folder includes static files (basic piece of middleware loaded)
-    .use(favicon(__dirname + '/public/favicon.ico')); // Activates the favicon specified
+    .use(favicon(__dirname + '/public/favicon.ico')) // Activates the favicon specified
+    .set('view engine', 'ejs');
+
 
 app.get('/', function (req, res) {
         res.setHeader('Content-Type', 'text/html');
@@ -62,4 +64,4 @@ app.get('/', function (req, res) {
         res.status(404).send('Page cannot be found!')
     });
 
-app.listen(8080);
+app.listen(3000);

@@ -1,0 +1,12 @@
+<div class="form-header">
+    <% if (locals.result) { %>
+      <h2>El resultado es: <%= locals.result +' '+ locals.result1%></h2>
+    <% } else { %>
+      <h2>Ingrese valores:</h2>
+    <% } %>
+  </div>
+<form action="/conjuntos" method="POST">
+    <input type="text" placeholder="[2,..]" name="A">
+    <input type="text" placeholder="[1,..]" name="B">
+    <button type="submit">Operacion Conjuntos</button>
+</form>

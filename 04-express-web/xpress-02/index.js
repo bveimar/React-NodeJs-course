@@ -6,6 +6,6 @@ var server = http.createServer(function (req, res) {
         res.writeHead(200, {'Content-Type': 'text/plain'});
         res.end('Hi everybody on Course!');
     }
-    setTimeout(cb, 10000)
+    setTimeout(cb, 10000) //carga un por uno en sun solo hilo 
 });
 server.listen(8080);

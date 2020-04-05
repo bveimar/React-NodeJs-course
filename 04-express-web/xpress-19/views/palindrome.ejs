@@ -1,0 +1,11 @@
+<div class="form-header">
+    <% if (locals.result) { %>
+      <h2> <%= locals.result %> </h2>
+    <% } else { %>
+      <h2>Ingrese Palabra</h2>
+    <% } %>
+  </div>
+<form action="/palindrome" method="POST">
+    <input type="text" placeholder="A" name="A">
+    <button type="submit">Es Palindrome</button>
+</form>

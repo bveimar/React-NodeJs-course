@@ -1,6 +1,6 @@
 let doWork = (name, ...numbers)=>{
     let result =0;
-    console.log ('Processing for ${name}');
+    console.log (`Processing for ${name}`); //string interpolation
     numbers.forEach (n=>{
         result = result +n;
     });

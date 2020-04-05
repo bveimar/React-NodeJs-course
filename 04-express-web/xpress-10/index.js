@@ -32,7 +32,7 @@ app.get('/floor/1/bedroom', function (req, res) {
     res.end('Hey, this is a private area!');
 });
 
-app.use(function(req, res, next){
+app.use(function(req, res, next){                   //def midllewear  se ejecuta en cualquier punto del request se ejecuta al final
     res.setHeader('Content-Type', 'text/plain');
     res.status(404).send('Page cannot be found!')
 });

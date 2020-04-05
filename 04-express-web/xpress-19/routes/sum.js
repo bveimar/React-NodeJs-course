@@ -8,7 +8,7 @@ router.get('/', function (req, res, next) {
 
 router.post('/', function (req, res, next) {
   console.log(req.body);
-  let data = { result: req.body.A + req.body.B };
+  let data = { result: Number(req.body.A) + Number(req.body.B) };
   res.render('sum', data);
 });
 
