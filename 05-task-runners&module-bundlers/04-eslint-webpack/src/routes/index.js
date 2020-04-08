@@ -12,11 +12,12 @@ let flights = require('../data');
  * GET home page.
  */
 
+
 router
-	.get('/', function (req, res, next) {
-		//console.log(flights);
-		res.render('index', { title: 'Flights', flights });
-	})
+  .get('/', function (req, res, next) {
+  //console.log(flights);
+    res.render('index', { title: 'Flights', flights });
+  })
 	.post('/', function (req, res, next) {
 		// Get values from POST request. These can be done through forms or REST calls. These rely on the "name" attributes for forms
 		var number = req.body.number;

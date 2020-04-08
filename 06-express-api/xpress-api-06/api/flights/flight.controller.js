@@ -1,5 +1,5 @@
 //let Person = require('../../models/person');
-
+//estructura del crud definida
 function getFlights(req, res) {
     console.log('Getting Flights...');
 }

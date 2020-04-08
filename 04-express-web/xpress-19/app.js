@@ -9,7 +9,8 @@ var usersRouter = require('./routes/users');
 var sumRouter = require('./routes/sum');
 var palRouter = require('./routes/palindrome');
 var conjRouter = require('./routes/conjuntos');
-
+var fiboRouter = require('./routes/fibonacci');
+var complexCalRouter = require('./routes/complexCalculator');
 var app = express();
 
 // view engine setup
@@ -27,6 +28,8 @@ app.use('/users', usersRouter);
 app.use('/sum', sumRouter);
 app.use('/palindrome', palRouter);
 app.use('/conjuntos', conjRouter);
+app.use('/fibonacci', fiboRouter);
+app.use('/complexCalculator', complexCalRouter);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));

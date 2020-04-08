@@ -28,7 +28,7 @@
     "rules": {
       //Possible Errors
       "comma-dangle": 0,                                          //disallow or enforce trailing commas
-      "no-cond-assign": 2,                                        //disallow assignment in conditional expressions
+      "no-cond-assign": 2, //numn 2 siginifica que dara advertencia //disallow assignment in conditional expressions
       "no-console": 0,                                            //disallow use of console in the node environment
       "no-constant-condition": 1,                                 //disallow use of constant expressions in conditions
       "no-control-regex": 2,                                      //disallow control characters in regular expressions
@@ -169,7 +169,7 @@
       "id-blacklist": 0,                                          //blacklist certain identifiers to prevent them being used
       "id-length": 0,                                             //this option enforces minimum and maximum identifier lengths (variable names, property names etc.)
       "id-match": 0,                                              //require identifiers to match the provided regular expression
-      "indent": [2, 2, { "SwitchCase": 1 }],                      //specify tab or space width for your code
+      "indent": [0, 2, { "SwitchCase": 1 }],                      //specify tab or space width for your code
       "jsx-quotes": 0,                                            //specify whether double or single quotes should be used in JSX attributes
       "key-spacing": 2,                                           //enforce spacing between keys and values in object literal properties
       "keyword-spacing": [2, {
@@ -234,14 +234,14 @@
       "operator-linebreak": [1, "after"],                         //enforce operators to be placed before or after line breaks
       "padded-blocks": [0, "never"],                              //enforce padding within blocks
       "quote-props": [0, "as-needed"],                            //require quotes around object literal property names
-      "quotes": [2, "single", { "allowTemplateLiterals": true }], //specify whether backticks, double or single quotes should be used
+      "quotes": [1, "double", { "allowTemplateLiterals": true }], //specify whether backticks, double or single quotes should be used
       "require-jsdoc": 0,                                         //Require JSDoc comment
       "semi-spacing": 2,                                          //enforce spacing before and after semicolons
       "sort-imports": 0,                                          //sort import declarations within module
       "semi": 2,                                                  //require or disallow use of semicolons instead of ASI
       "sort-vars": 0,                                             //sort variables within the same declaration block
       "space-before-blocks": 2,                                   //require or disallow a space before blocks
-      "space-before-function-paren": [2, "never"],                //require or disallow a space before function opening parenthesis
+      "space-before-function-paren": [0, "never"],                //require or disallow a space before function opening parenthesis
       "space-in-parens": 2,                                       //require or disallow spaces inside parentheses
       "space-infix-ops": 2,                                       //require spaces around operators
       "space-unary-ops": 2,                                       //require or disallow spaces before/after unary operators

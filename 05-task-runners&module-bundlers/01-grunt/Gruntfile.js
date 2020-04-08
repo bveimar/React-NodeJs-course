@@ -21,7 +21,7 @@ module.exports = function(grunt) {
       tasks: ["test/test.js"],
     },
     clean: {
-      test: ["dist/**"],
+      test: ["dist/**"], //borrar todo lo que tenga la carpeta dist
 	},
 	copy: {
 		main: {
@@ -38,6 +38,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks("grunt-contrib-clean");
   grunt.loadNpmTasks("grunt-contrib-nodeunit");
   grunt.loadNpmTasks("grunt-contrib-copy");
-  //grunt.registerTask("build", ["clean", "babel", "nodeunit", "clean"]);
+  //grunt.registerTask("build", ["clean", "babel", "nodeunit", "clean","minify"]);
   grunt.registerTask("build", ["clean", "copy", "babel"]);
+  //grunt.registerTask("build", ["deploy","clean", "copy", "babel"]);
 };

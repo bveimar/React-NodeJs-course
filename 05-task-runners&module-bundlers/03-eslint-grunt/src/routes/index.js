@@ -13,11 +13,11 @@ let flights = require('../data');
  */
 
 router
-	.get('/', function (req, res, next) {
-		//console.log(flights);
-		res.render('index', { title: 'Flights', flights });
-	})
-	.post('/', function (req, res, next) {
+  .get('/', function(req, res, next) {
+  //console.log(flights);
+    res.render('index', { title: 'Flights', flights });
+  })
+  .post('/', function (req, res, next) {
 		// Get values from POST request. These can be done through forms or REST calls. These rely on the "name" attributes for forms
 		var number = req.body.number;
 		var origin = req.body.origin;
@@ -66,26 +66,26 @@ router
 		});
 	})
 	.post('/:id/update', function (req, res) {
-		var number = req.body.number;
-		var origin = req.body.origin;
-		var destination = req.body.destination;
-		var departs = req.body.departs;
-		var arrives = req.body.arrives;
-		//call the create function for our database
-		let item = {
-			number,
-			origin,
-			destination,
-			departs,
-			arrives
-		};
-		//flights.push(item);
-		flights[req.params.id] = item;
-		console.log(flights);
-		//res.redirect("/");
-		res.format({
-			//HTML response will set the location and redirect back to the home page. You could also create a 'success' page if that's your thing
-			html: function () {
+    var number = req.body.number;
+    var origin = req.body.origin;
+    var destination = req.body.destination;
+    var departs = req.body.departs;
+    var arrives = req.body.arrives;
+    //call the create function for our database
+    let item = {
+		number,
+		origin,
+		destination,
+		departs,
+		arrives
+    };
+    //flights.push(item);
+    flights[req.params.id] = item;
+    console.log(flights);
+    //res.redirect("/");
+    res.format({
+    //HTML response will set the location and redirect back to the home page. You could also create a 'success' page if that's your thing
+     html: function () {
 				// If it worked, set the header so the address bar doesn't still say /adduser
 				res.location("");
 				// And forward to success page

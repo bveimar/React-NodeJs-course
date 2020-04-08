@@ -1,6 +1,7 @@
 ## Tasks Day 9
 	
-### Show you through a series of exercises that introduce you to ES6 features.
+### Show you
+ through a series of exercises that introduce you to ES6 features.
 
 ```
 	npx tower-of-babel

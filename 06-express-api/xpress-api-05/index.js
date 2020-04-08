@@ -33,11 +33,12 @@ router.get('/', function(req, res) {
 
 // more routes for our API will happen here
 // ----------------------------------------------------
-router.route('/persons') //please lets use plural
+router.route('/persons') //please lets use plural APIs simpre en plural
 
     // create a bear (accessed at POST http://localhost:8080/api/bears)
     .post(function(req, res) {
         console.log('Person ready');
+        console.log("Body", req.body);
         var enrique = new Person();      // create a new instance of the Person model
         enrique.name = req.body.name;  // set the person name (comes from the request)
         

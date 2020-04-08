@@ -25,7 +25,7 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.js$/,
+                test: /\.js$/, //solo archuivos js
                 loader: 'babel-loader',
                 query: {
                     presets: ['env']
