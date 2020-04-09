@@ -5,7 +5,7 @@ var router = express.Router();
 router.get('/', function (req, res, next) {
     res.render('conjuntos', {});
   });
-  
+  //post
   router.post('/', function (req, res, next) {
     console.log(req.body.B);
     let A = req.body.A.split(',').join('');
